@@ -1,0 +1,1 @@
+hello.title=Bonjour à tous

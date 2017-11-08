@@ -1,0 +1,18 @@
+@(message: String)(implicit request: MessagesRequestHeader)
+
+@import b3.vertical.fieldConstructor  // Declares a vertical field constructor as default
+
+@main("Welcome to Play") {
+
+    <div class="col-md-12">
+        <h2>Hello there</h2>
+        <p>Message @message</p>
+        <p>I18N Support : @Messages("hello.title")</p>
+
+        @b3.submit('class -> "btn btn-primary"){ Sign in }
+
+        <div id="divTestjQuery" class="alert alert-danger">jquery is not working</div>
+
+    </div>
+
+}
