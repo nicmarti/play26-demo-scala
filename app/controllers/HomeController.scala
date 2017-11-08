@@ -8,7 +8,12 @@ class HomeController @Inject()(messagesAction: MessagesActionBuilder, cc: Contro
 
   def index = messagesAction {
     implicit request: MessagesRequest[AnyContent] =>
-      Ok(views.html.index("Message sent from the controller"))
+      Ok(views.html.index())
+  }
+
+  def demoTest = messagesAction {
+    implicit request: MessagesRequest[AnyContent] =>
+      Ok(views.html.demoTest("Message sent from the controller"))
   }
 
 }

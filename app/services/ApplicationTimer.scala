@@ -13,12 +13,12 @@ import scala.concurrent.Future
  * long the application was running for.
  *
  * This class is registered for Guice dependency injection in the
- * [[Module]] class. We want the class to start when the application
+ * Module class. We want the class to start when the application
  * starts, so it is registered as an "eager singleton". See the code
- * in the [[Module]] class to see how this happens.
+ * in the Module class to see how this happens.
  *
  * This class needs to run code when the server stops. It uses the
- * application's [[ApplicationLifecycle]] to register a stop hook.
+ * application's ApplicationLifecycle to register a stop hook.
  */
 @Singleton
 class ApplicationTimer @Inject() (clock: Clock, appLifecycle: ApplicationLifecycle) {

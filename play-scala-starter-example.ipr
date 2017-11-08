@@ -336,6 +336,9 @@
     </option>
     <option name="maximumHeapSize" value="1025" />
   </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
   <component name="libraryTable">
     <library name="SBT: aopalliance:aopalliance:1.0:jar">
       <CLASSES>
