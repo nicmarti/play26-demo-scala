@@ -8,7 +8,7 @@ resolvers += Resolver.sonatypeRepo("snapshots")
 
 LessKeys.compress in Assets := true
 
-pipelineStages := Seq(rjs, digest, gzip)
+pipelineStages := Seq(digest, gzip)
 
 includeFilter in (Assets, LessKeys.less) := "*.less"
 
