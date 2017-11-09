@@ -1,1 +1,5 @@
 hello.title=Hello world !!!
+create.new=Create a new webuser
+create.submit=Save
+create.age=Age
+create.username=Webuser name

@@ -1,0 +1,38 @@
+@(webusers: List[Webuser])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@main("All Webusers") {
+
+    <div class="col-lg-12">
+        <h1>All webusers</h1>
+
+        @flash.get("success").map { msg: String =>
+            <div class="alert alert-success">
+                @msg
+            </div>
+        }
+
+    </div>
+
+    <div class="col-lg-8 col-lg-offset-2">
+
+        <a href="@routes.WebuserController.newWebuser()" class="btn btn-primary">Create one web user</a>
+
+        <table class="table table-bordered">
+            <tbody>
+            @for(webuser <- webusers.sortBy(_.age)) {
+                <tr>
+                    <td>
+                    @webuser.username
+                    </td>
+                    <td>
+                    @webuser.age
+                    </td>
+                </tr>
+
+            }
+            </tbody>
+        </table>
+
+    </div>
+
+}

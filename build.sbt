@@ -23,7 +23,6 @@ libraryDependencies += "com.h2database" % "h2" % "1.4.196"
 // Used for icons
 libraryDependencies += "org.webjars" % "font-awesome" % "4.7.0"
 
-// Accordingto Play bootstrap we need to specify the lib version
 libraryDependencies += "org.webjars" % "bootstrap" % "3.3.7-1"
 libraryDependencies += "org.webjars" % "jquery" % "3.2.1"
 

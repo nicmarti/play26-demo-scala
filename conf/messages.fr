@@ -1,1 +1,5 @@
 hello.title=Bonjour à tous
+create.new=Créer un nouvel utilisateur
+create.submit=Sauver
+create.age=Age
+create.username=Nom d''utilisateur
