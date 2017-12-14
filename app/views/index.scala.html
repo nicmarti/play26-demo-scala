@@ -3,8 +3,17 @@
 @main("Demo Play 2.6 Scala") {
 
     <div class="col-md-12">
-        <h2>Hello there</h2>
+        <h2>Hello</h2>
         <p>This is a Play 2.6 Scala application, deployed for demo purpose</p>
+
+        <h2>Basic CRUD</h2>
+
+        <p><a href="@routes.WebuserController.listAllWebusers()" class="btn btn-primary"><i class="fa fa-user"></i> See all web users</a></p>
+
+
+        <h2>Async Controller</h2>
+        <p> <a href="@routes.AsyncController.message">Click here for the AsyncController action!</a>
+        </p>
 
     </div>
 

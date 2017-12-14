@@ -13,6 +13,7 @@ class WebuserController @Inject()(messagesAction: MessagesActionBuilder, cc: Con
 
   def newWebuser = messagesAction {
     implicit request: MessagesRequest[AnyContent] =>
+
       Ok(views.html.newWebuser(Webuser.webuserForm))
   }
 

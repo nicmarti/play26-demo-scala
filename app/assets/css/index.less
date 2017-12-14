@@ -1,4 +1,45 @@
 
-body {
-  margin-top: 70px;
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+@redLuna: #ff3840;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@redLuna, 5%);
+  border-color: lighten(@redLuna, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+
+.lunatech-footer{
+  position: absolute;
+
 }

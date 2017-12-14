@@ -3,11 +3,11 @@ package services
 import models.Webuser
 import javax.inject._
 
-import org.apache.commons.lang3.RandomStringUtils
+import lib.RandomNameGenerator
 
 trait WebuserService {
 
-  def createManyWebusers
+  def createManyWebusers():Unit
 
   def saveWebuser(webuser: Webuser)
 
@@ -20,7 +20,7 @@ class InMemoryWebuserService extends WebuserService {
   override def createManyWebusers: Unit = {
     for (j <- 18 to 80) {
       val webuser = Webuser(
-        RandomStringUtils.randomAlphanumeric(10),
+        RandomNameGenerator.nextName(),
         j)
       saveWebuser(webuser)
     }
@@ -38,9 +38,7 @@ class InMemoryWebuserService extends WebuserService {
       createManyWebusers
       webusers
     } else {
-
       webusers
     }
-
   }
 }

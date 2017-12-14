@@ -3,7 +3,6 @@
 
 @main("New webuser") {
 
-
     <div class="col-lg-12">
         <h1><i class="fa fa-user"></i> @Messages("create.new")</h1>
     </div>
@@ -11,9 +10,11 @@
     <div class="col-lg-5">
     @b3.formCSRF(action = routes.WebuserController.saveWebuser()) {
 
-        @b3.text(form("user"), '_label -> Messages("create.username"),'placeholder -> "Username")
-        @b3.text(form("age"), '_label -> Messages("create.age"), 'placeholder -> "Age",'_help -> "From 18 to 99 years old")
-        @b3.submit('class -> "btn btn-primary") { @Messages("create.submit") }
+        @b3.text(form("user"), '_label -> Messages("create.username"), 'placeholder -> "Username")
+        @b3.text(form("age"), '_label -> Messages("create.age"), 'placeholder -> "Age", '_help -> "From 18 to 99 years old")
+        @b3.submit('class -> "btn btn-primary") {
+            @Messages("create.submit")
+        }
     }
     </div>
 
